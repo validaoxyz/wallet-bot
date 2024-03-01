@@ -1,0 +1,53 @@
+{
+    "networks": [
+        {
+            "name": "agoric",
+            "type": "cosmos",
+            "rpcUrl": "http://my-private-rpc",
+            "accounts": [
+                {
+                    "address": "",
+                    "purpose": "IBC relayer",
+                    "balance_threshold": 20000000
+                }
+            ],
+            "numerator": 1000000,
+            "bad_request_threshold": 24,
+            "denom": "ubld",
+            "coingecko_name": "agoric"
+        },
+        {
+            "name":"Oracle",
+            "type":"ethereum",
+            "rpcUrl":"https://rpc.ankr.com/eth",
+            "accounts":[
+                {
+                    "address":"",
+                    "purpose":"Oracle",
+                    "balance_threshold":300000000000000000
+                }
+            ],
+            "numerator":1000000000000000000,
+            "bad_request_threshold":12,
+            "denom":"wei",
+            "coingecko_name":"ethereum"
+        },
+        {
+            "name": "akash",
+            "type": "cosmos",
+            "rpcUrl": "",
+            "accounts": [
+                {
+                    "address": "",
+                    "purpose": "REStake",
+                    "balance_threshold": 2000000
+                }
+            ],
+            "numerator": 1000000,
+            "bad_request_threshold": 24,
+            "denom": "uakt",
+            "coingecko_name": "akash-network"
+        },
+
+    ]
+}
