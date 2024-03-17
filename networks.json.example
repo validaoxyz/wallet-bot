@@ -1,53 +1,52 @@
 {
-    "networks": [
+    "blockchainNetworks": [
         {
-            "name": "agoric",
-            "type": "cosmos",
-            "rpcUrl": "http://my-private-rpc",
-            "accounts": [
+            "identifier": "agoric",
+            "kind": "cosmos",
+            "endpoint": "",
+            "wallets": [
                 {
-                    "address": "",
-                    "purpose": "IBC relayer",
-                    "balance_threshold": 20000000
+                    "walletAddress": "",
+                    "useCase": "IBC relayer",
+                    "minBalance": 20000000
                 }
             ],
-            "numerator": 1000000,
-            "bad_request_threshold": 24,
-            "denom": "ubld",
-            "coingecko_name": "agoric"
+            "conversionFactor": 1000000,
+            "failureThreshold": 24,
+            "currencyUnit": "ubld",
+            "priceSource": "agoric"
         },
         {
-            "name":"Oracle",
-            "type":"ethereum",
-            "rpcUrl":"https://rpc.ankr.com/eth",
-            "accounts":[
+            "identifier":"Oracle",
+            "kind":"ethereum",
+            "endpoint":"https://rpc.ankr.com/eth",
+            "wallets":[
                 {
-                    "address":"",
-                    "purpose":"Oracle",
-                    "balance_threshold":300000000000000000
+                    "walletAddress":"",
+                    "useCase":"",
+                    "minBalance":300000000000000000
                 }
             ],
-            "numerator":1000000000000000000,
-            "bad_request_threshold":12,
-            "denom":"wei",
-            "coingecko_name":"ethereum"
+            "conversionFactor":1000000000000000000,
+            "failureThreshold":12,
+            "currencyUnit":"wei",
+            "priceSource":"ethereum"
         },
         {
-            "name": "akash",
-            "type": "cosmos",
-            "rpcUrl": "",
-            "accounts": [
+            "identifier": "cosmoshub",
+            "kind": "cosmos",
+            "endpoint": "",
+            "wallets": [
                 {
-                    "address": "",
-                    "purpose": "REStake",
-                    "balance_threshold": 2000000
+                    "walletAddress": "",
+                    "useCase": "",
+                    "minBalance": 2000000
                 }
             ],
-            "numerator": 1000000,
-            "bad_request_threshold": 24,
-            "denom": "uakt",
-            "coingecko_name": "akash-network"
-        },
-
+            "conversionFactor": 1000000,
+            "failureThreshold": 24,
+            "currencyUnit": "uatom",
+            "priceSource": "cosmos"
+        }
     ]
 }
